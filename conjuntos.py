@@ -84,8 +84,8 @@ conjunto_a = {1,2,3}
 conjunto_b = {4,5,6, 2, 1, 9}
 conjunto_c = {1,0}
 
-conjunto_d = conjunto_a.isdisjoin(conjunto_b) # True
-conjunto_f = conjunto_a.isdisjoin(conjunto_c) # False
+conjunto_d = conjunto_a.isdisjoint(conjunto_b) # True
+conjunto_f = conjunto_a.isdisjoint(conjunto_c) # False
 
 print(conjunto_d, conjunto_f)
 
@@ -124,15 +124,15 @@ print(numeros) #{1,3,4,5,6,8,9,10}
 numeros= {0,1,2,3,4,5,6,7,8,9,10}
 
 print(numeros)#{0,1,2,3,4,5,6,7,8,9,10}
-numeros.pop(0)
-numeros.pop(1)
+numeros.pop()
+numeros.pop()
 print(numeros) #{2,3,4,5,6,8,9,10}
 
 #{}.remove
 numeros= {0,1,2,3,4,5,6,7,8,9,10}
 
 print(numeros)#{0,1,2,3,4,5,6,7,8,9,10}
-numeros.pop(0)
+numeros.remove(0)
 print(numeros) #{1,2,3,4,5,6,8,9,10}
 
 # len
