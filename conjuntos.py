@@ -84,8 +84,64 @@ conjunto_a = {1,2,3}
 conjunto_b = {4,5,6, 2, 1, 9}
 conjunto_c = {1,0}
 
-conjunto_d = conjunto_a.isdisjoin(conjunto_b)
-conjunto_f = conjunto_a.isdisjoin(conjunto_c)
+conjunto_d = conjunto_a.isdisjoin(conjunto_b) # True
+conjunto_f = conjunto_a.isdisjoin(conjunto_c) # False
 
 print(conjunto_d, conjunto_f)
 
+#{}.add
+sorteio = {1,2}
+
+sorteio.add(25) # {1,2,25}
+sorteio.add(42) # {1,23,25,42}
+sorteio.add(25) # {1,23,25,42}
+
+print(sorteio)
+
+#{}.clear
+sorteio = {1,23,25,42,45}
+
+print(sorteio)
+sorteio.clear()
+print(sorteio)
+
+#{}.copy
+sorteio = {1,23,25,42,45}
+
+print(sorteio)
+sorteio.copy()
+print(sorteio)
+
+#{}.discard
+numeros= {1,2,3,4,5,6,7,8,9,10}
+
+print(numeros)
+numeros.discard(2)
+numeros.discard(7)
+print(numeros) #{1,3,4,5,6,8,9,10}
+
+#{}.pop
+numeros= {0,1,2,3,4,5,6,7,8,9,10}
+
+print(numeros)#{0,1,2,3,4,5,6,7,8,9,10}
+numeros.pop(0)
+numeros.pop(1)
+print(numeros) #{2,3,4,5,6,8,9,10}
+
+#{}.remove
+numeros= {0,1,2,3,4,5,6,7,8,9,10}
+
+print(numeros)#{0,1,2,3,4,5,6,7,8,9,10}
+numeros.pop(0)
+print(numeros) #{1,2,3,4,5,6,8,9,10}
+
+# len
+numeros= {1,2,3,4,5,6,7,8,9,0}
+
+print(len(numeros)) #{10}
+
+# in
+numeros= {1,2,3,1,2,4,5,5,6,7,8,9,0}
+
+print(1 in(numeros)) #True
+print(10 in(numeros)) #False
