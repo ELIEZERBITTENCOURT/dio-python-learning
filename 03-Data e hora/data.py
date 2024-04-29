@@ -4,7 +4,7 @@
 # data = datetime.date(2024, 5, 19)
 # print(data)
 
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 data = date(2024, 5, 19)
 print(data)
@@ -41,4 +41,21 @@ mascara_ptbr = "%d/%m/%Y %H:%M"
 
 print(data_hora_atual.strftime(mascara_ptbr))
 
+############## Trabalhando com timezone()#########################
+# Com biblioteca 'pytz'
+# > criar ambiente venv
+# > instalar o pacote 'pytz' (pip install pytz)
+# > e depois deve ser importado o pytz 
+# import pytz
+#
+# data_pytz = datetime.now(pytz.timezone("Europe/Oslo"))
+# data_pytz1 = datetime.now(pytz.timezone("America/Sao_Paulo"))
+#
+# print(data_pytz)
+# print(data_ptz1)
 
+data_timezone_oslo = datetime.now(timezone(timedelta(hours=2)))
+data_timezone_saopaulo = datetime.now(timezone(timedelta(hours=3)))
+
+print(data_timezone_oslo)
+print(data_timezone_saopaulo)
