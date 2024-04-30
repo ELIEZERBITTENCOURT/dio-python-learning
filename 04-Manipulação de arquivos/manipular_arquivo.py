@@ -7,7 +7,7 @@ from pathlib import Path
 ############# Abrir e fechar arquivo #########################
 # open() 
 # close()
-# modo de abrir arquivos "r"(ler), "w"(escrever) e "a"(anexar)
+# modo de abrir arquivos "r"(ler), "w"(escreve e sobescreve o que havia ) e "a"( escreve e anexar conteudo sem apagar o que tava escrito antes)
 # file = open("example.txt", "r")
 # print(file.read())
 # file.close()
@@ -16,7 +16,7 @@ from pathlib import Path
 
 #file = open("example.txt", "r")
 #print(file.read())# => retorna o texto do arquivo
-#print(file.readline())# => retorna linha a linha
+#print(file.readline())# => retorna linha a proxima linha
 #print(file.readlines())# => retorna texto numa lista
 
 #tip
