@@ -14,21 +14,21 @@ from pathlib import Path
 
 ############## Lendo arquivo #################################
 
-file = open("example.txt", "r")
-print(file.read())# => retorna o texto do arquivo
-print(file.readline())# => retorna linha a linha
-print(file.readlines())# => retorna texto numa lista
+#file = open("example.txt", "r")
+#print(file.read())# => retorna o texto do arquivo
+#print(file.readline())# => retorna linha a linha
+#print(file.readlines())# => retorna texto numa lista
 
 #tip
 #while len(linha := file.readline()):
 #    print(linha)
-file.close()
+#file.close()
 
 ############## Escrendo em arquivo ############################
-arquivo = open("teste.txt", "w")
-arquivo.write("Escrevendo em um novo arquivo")
-arquivo.writelines(["\n", "escrevendo", "\n","um", "\n","novo","\n","texto"])
-arquivo.close()
+# arquivo = open("teste.txt", "w")
+# arquivo.write("Escrevendo em um novo arquivo")
+# arquivo.writelines(["\n", "escrevendo", "\n","um", "\n","novo","\n","texto"])
+# arquivo.close()
 
 ############## Gerenciando arquivos e diretórios ##############
 # podemos criar, renomear, mover e remover um arquivo.
@@ -114,6 +114,7 @@ ROOT_PATH = Path(__file__).parent
 COLUNA_ID = 0
 COLUNA_NOME = 1
 
+# ao gravar no arquivo '.csv' defina o argumento newline=''
 
 try:
     with open(ROOT_PATH / "usuarios.csv", "w", newline="", encoding="utf-8") as arquivo:
@@ -121,7 +122,7 @@ try:
         escritor.writerow(["id", "nome"])
         escritor.writerow(["1", "Maria"])
         escritor.writerow(["2", "João"])
-except IOError as exc:
+except OSError as exc:
     print(f"Erro ao criar o arquivo. {exc}")
 
 
@@ -133,15 +134,15 @@ try:
                 continue
             print(f"ID: {row[COLUNA_ID]}")
             print(f"Nome: {row[COLUNA_NOME]}")
-except IOError as exc:
+except OSError as exc:
     print(f"Erro ao criar o arquivo. {exc}")
 
-
+# Quando queremos acessar um arquivo com dict
 try:
     with open(ROOT_PATH / "usuarios.csv", newline="") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             print(f"ID: {row['id']}")
             print(f"Nome: {row['nome']}")
-except IOError as exc:
+except OSError as exc:
     print(f"Erro ao criar o arquivo. {exc}")
