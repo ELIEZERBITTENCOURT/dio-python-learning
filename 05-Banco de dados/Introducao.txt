@@ -1,0 +1,29 @@
+Comandos
+
+SELECT {{lista_coluna}} (utilizando o * será selecionado tudo na tabela)
+FROM tabela 
+
+-------------------------------------------------------------
+
+SELECT {{lista_coluna}}
+FROM {{tabela}} 
+WHERE 
+    {{condicao}}
+
+-------------------------------------------------------------
+
+UPDATE {{tabela}}
+SET
+    {{coluna_01 }} = {{novo_valor_1}},
+    {{coluna_02 }} = {{novo_valor_2}}
+WHERE 
+    {{condicao}}
+
+--------------------------------------------------------------
+
+DELETE
+    {{tabela}}
+WHERE 
+    {{condicao}}
+
+-------------------------------------------------------------
