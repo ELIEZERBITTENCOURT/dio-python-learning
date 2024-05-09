@@ -1,5 +1,9 @@
 Comandos
 
+CREATE TABLE {{tabela}}
+------------------------------------------------------------
+INSERT INTO {{informações}}
+------------------------------------------------------------
 SELECT {{lista_coluna}} (utilizando o * será selecionado tudo na tabela)
 FROM tabela 
 
@@ -27,3 +31,9 @@ WHERE
     {{condicao}}
 
 -------------------------------------------------------------
+este comando exclui permanente a tabela:
+DROP TABLE {{tabela}}
+
+este comando modifica a estrutura de uma tabela:
+ALTER TABLE {{tabela}}
+--------------------------------------------------------------
