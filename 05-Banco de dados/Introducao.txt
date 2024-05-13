@@ -36,4 +36,13 @@ DROP TABLE {{tabela}}
 
 este comando modifica a estrutura de uma tabela:
 ALTER TABLE {{tabela}}
+MODIFY COLUMN id AUTO_INCREMENT
 --------------------------------------------------------------
+
+CHAVES ESTRANGEIRA
+
+CREATE TABLE{{tabel}}(
+    id INT PRIMARY KEY,
+    chave_estrangeira INT,
+    FOREIGN KEY (chave_estrangeira)
+);
